@@ -21,11 +21,19 @@
 	 		$.fn.imasker.defaults.masker.css({
 		 		'height': $height,	 		
 		 		'width' : $width,
+        'display': 'block'
 	 		});
 	 	}		 	
 	};
 	
-	$.fn.imasker_none = function(){
+	$.fn.imasker_hide = function(){
+		$masker = $.fn.imasker.defaults.masker;
+		if(  $masker != null ){
+			$.fn.imasker.defaults.masker.css({'display': 'none'}) ;
+		}
+	};
+	
+	$.fn.imasker_remove = function(){
 		$masker = $.fn.imasker.defaults.masker;
 		if(  $masker != null ){
 			$masker.remove();			

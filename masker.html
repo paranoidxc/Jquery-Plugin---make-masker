@@ -10,17 +10,18 @@ $(document).ready(function(){
 	$.fn.imasker({
 		'top' : '80px'
 	});
-	/*
-	$('#mac_panel_wrap').paranoid_masker({
-		'top': '40px'
-	});
-	*/
+
 	$("#btn").click(function(){
-		$.fn.imasker_none();	
+		$.fn.imasker_remove();	
 	});
-	$("#addbtn").click(function(){
+
+	$("#show").click(function(){
 		$.fn.imasker();
 	});
+	$("#hide").click(function(){
+		$.fn.imasker_hide();
+	});
+
 });
 </script>
 <style type="text/css">
@@ -29,8 +30,9 @@ $(document).ready(function(){
 </style>
 </head>
 <body id="test">
-<input type="button" value="remove masker" id="btn">
-<input type="button" value="add masker" id="addbtn">
+<input type="button" value="Remove masker" id="btn">
+<input type="button" value="Show masker" id="show">
+<input type="button" value="Hide masker" id="hide">
   <div class="mac_div" id="mac_panel_wrap">
 	
     <!-- mac panel top start -->
