@@ -14,7 +14,7 @@
 		 		'background' : options.background,
 		 		'opacity'    : options.opacity,
 		 		'height': $height,	 		
-		 		'width' : $width,
+		 		'width' : $width
 		 	});		 	
 		 	$('body').append($masker);
 	 	}else{
