@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>xiaochuanHuang-Paranoid</title>
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery.imasker.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$.fn.imasker({
+		'top' : '80px'
+	});
+	/*
+	$('#mac_panel_wrap').paranoid_masker({
+		'top': '40px'
+	});
+	*/
+	$("#btn").click(function(){
+		$.fn.imasker_none();	
+	});
+	$("#addbtn").click(function(){
+		$.fn.imasker();
+	});
+});
+</script>
+<style type="text/css">
+  
+
+</style>
+</head>
+<body id="test">
+<input type="button" value="remove masker" id="btn">
+<input type="button" value="add masker" id="addbtn">
+  <div class="mac_div" id="mac_panel_wrap">
+	
+    <!-- mac panel top start -->
+     <table class="mac_panel tree_mac_panel">
+       <tr class="panel_top">
+         <td class="left"></td>
+         <td class="left_ct" >
+           <span class="ct close">close</span>
+           <span class="ct min">min</span>
+           <span class="ct max">max</span>
+           <span class="ct inactive">inactive</span>
+         </td>
+         <td class="middle drag_handle">
+           <span class="title">xiaochuan Huang's vCard</span>
+         </td>
+         <td class="right_ct">
+         		<span class="ct mb">panel</span>
+         </td>
+         <td class="right"></td>
+       </tr>
+      </table>
+    <!-- mac panel top end -->
+
+     <!-- mac panel middle start -->
+     <table class="mac_panel tree_mac_panel" id="content">
+       <tr class="panel_middle">
+         <td class="left">
+           <div class="tree_div" >
+             111
+           </div>
+         </td>
+         <td class="middle">         	
+
+         	<table style="width: 100%;">             
+         		<tr>
+         			<td style="width: 200px; vertical-align: top; background: #D1D7E2; height:300px;">
+         				<div class="column_nav">
+             			<ul>
+               			<li><a href="#" calss="" reldivid="#networks">Network</a></li>
+               			<li><a href="#" reldivid="#about_me">Me</a></li>
+               			<li><a href="#" reldivid="#contact_me" >Contact</a></li>
+               			<li><a href="#" class="current" reldivid="#portfolio" >Portfolio</a></li>               
+             			</ul>
+           			</div>
+         			</td>
+         			<td style="vertical-align: top;">
+         				<div class="column_content">
+           				<!-- network start -->
+         					<div id="networks" class='dN'>           				
+           					<ul>
+           						<li>
+           							<a href="http://www.douban.com/people/paranoidc" target="_blank"><img src="db.png" width="40" height="41" alt="Douban"><strong>Douban</strong>www.douban.com/people/paranoidc</a>           							
+         							</li>
+         							<li>
+           							<a href="http://www.flickr.com/photos/paranoidxc/" target="_blank"><img
+                          src="fr.png" width="40" height="41" alt="Flickr"><strong>Flickr</strong>www.flickr.com/photos/paranoidxc</a>           							
+         							</li>
+           					</ul>
+									</div>
+									<!-- network end -->
+
+           				<!-- about me start -->
+           				<div id="about_me" class='dN'>
+           					<h3><img src="timvandamme.png" width="40" height="40" alt="About me"><strong>About Me</strong></h3>
+           					<p>Single. Gemini. Born in 1985. Live in Fuzhou, China.</p>
+										<p>Paranoid is my nickname.</p>
+										<p>Enjoying colorful objects.</p>
+										<p>Never be evil. </p>
+										
+           					<!--
+           					<p>Hi，我的真实名字叫黄小川，常用网络昵称：paranoid. 爱好计算机技术，对web编程有爱，熟悉掌握php语言，了解java，ruby语言，有熟悉过linux系统，对web前端(html, css, javascript)也有一定程度的掌握．同时对计算机相关信息具有非常相当的兴趣，个人目前正专注于企业网站架构．
+           					</p>	
+         					-->
+           				</div>
+           				<!-- about me end -->
+           				
+           				<!-- contact me start -->
+           				<div id="contact_me" class='dN'>
+           					<h3><strong>Contact Me</strong></h3>          
+           					<p> Oops, will coming soon...</p> 					           		
+           				</div>
+           				<!-- contact me end -->
+           				
+           				<!-- Portfolio  start -->
+           				<div id="portfolio" class=''>
+           					<h3><strong>Portfolio</strong></h3>
+                    <dl class="thumbnail">
+                      <dt class="thumb"><img src="tb1.png"/></dt>
+                      <dt class="title"><a><span>tb2 title</span></a></dt>
+                      <dd class="summary">tb1 desc </dd>
+                    </dl>
+                    <dl class="thumbnail">
+                      <dt class="thumb"><img src="tb2.png"/></dt>
+                      <dt class="title"><a><span>tb2 title</span></a></dt>
+                      <dd class="summary">tb2 desc </dd>
+                    </dl>
+
+           				</div>
+           				<!-- Portfolio  end -->
+           				
+           			</div>
+           			
+         			</td>
+         		</tr>
+         	</table>
+         	
+         </td>
+         <td class="right"></td>
+       </tr>
+      </table>
+      <!-- mac panel middle end -->
+
+     <!-- mac panel bottom start -->
+     <table class="mac_panel tree_mac_panel">
+       <tr class="panel_bottom">
+         <td class="left"></td>
+         <td class="middle">
+           <span class="title">&copy; xiaochuang Huang 1985-‘10 </span>
+         </td>
+         <td class="right"></td>
+       </tr>
+      </table>
+      <!-- mac panel bottom end -->
+
+      <table>
+       <tr class="H_md">
+         <td class="first"></td>
+         <td class="H_l"></td>
+         <td class="H_innerc" id="H_innerc">
+         <div id="ct">
+         </div>
+         </td>
+         <td class="H_r" ></td>
+         <td class="last"></td>
+      </tr>
+    </table>
+
+  </div>
+</body>
+</html>
