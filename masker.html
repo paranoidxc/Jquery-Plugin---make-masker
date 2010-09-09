@@ -22,6 +22,10 @@ $(document).ready(function(){
 		$.fn.imasker_hide();
 	});
 
+  $(window).resize(function(){
+		//$.fn.imasker();
+  });
+
 });
 </script>
 <style type="text/css">
@@ -33,6 +37,7 @@ $(document).ready(function(){
 <input type="button" value="Remove masker" id="btn">
 <input type="button" value="Show masker" id="show">
 <input type="button" value="Hide masker" id="hide">
+<span id="txt" ></span>
   <div class="mac_div" id="mac_panel_wrap">
 	
     <!-- mac panel top start -->

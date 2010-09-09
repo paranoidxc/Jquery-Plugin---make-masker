@@ -1,11 +1,13 @@
 (function($){	
+  $abc = false;
 	$.fn.imasker = function(options){		
-		$height = $(window).height() > $(document).height() ? $(window).height() : $(document).height();
-		$width  = $(window).width() > $(document).width()  ? $(window).width()  : $(document).width();						
+    $height = document.body.scrollHeight;
+    $width = $(window).width();
+    $('#txt').html(  $(window).width() + '--' + document.body.scrollWidth + ' - ' + $(document).width() );
 		if( $.fn.imasker.defaults.masker == null ) {			
 			options = $.extend($.fn.imasker.defaults,options);
-			 			 	
 		 	$.fn.imasker.defaults.masker = $masker = $('<div></div>');
+      $masker.attr('id', options.id);
 		 	$masker.css({
 		 		'position': options.position,
 		 		'top'     : options.top,
@@ -23,7 +25,15 @@
 		 		'width' : $width,
         'display': 'block'
 	 		});
-	 	}		 	
+	 	};	 	
+
+    if(!$.fn.imasker.defaults.resizeHandler){
+      $.fn.imasker.defaults.resizeHandler = true;
+      $(window).resize(function(){
+		    $.fn.imasker();
+      });
+    };
+
 	};
 	
 	$.fn.imasker_hide = function(){
@@ -47,7 +57,9 @@
 		'position'   :'absolute',
 		'top'        :'0',
 		'left'       :'0',
-		'z-index'	 : null,
-		'masker'     : null		
+		'z-index'	   : null,
+		'masker'     : null,
+    'id'         : 'imasker',
+    'resizeHandler': false
 	};
 })(jQuery);
