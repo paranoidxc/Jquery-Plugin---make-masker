@@ -1,9 +1,14 @@
-(function($){	
-  $abc = false;
-	$.fn.imasker = function(options){		
-    $height = document.body.scrollHeight;
-    $width = $(window).width();
-    $('#txt').html(  $(window).width() + '--' + document.body.scrollWidth + ' - ' + $(document).width() );
+(function($){	  
+  $.fn.rmasker = function(){
+    if( $.fn.imasker.defaults.masker.css('display') == 'block'){
+      $.fn.imasker();
+    }
+  };
+  
+	$.fn.imasker = function(options){			  	  
+    $height = document.body.scrollHeight == 0 ? $(window).height() : document.body.scrollHeight;
+    $width = $(window).width();    
+    
 		if( $.fn.imasker.defaults.masker == null ) {			
 			options = $.extend($.fn.imasker.defaults,options);
 		 	$.fn.imasker.defaults.masker = $masker = $('<div></div>');
@@ -30,7 +35,7 @@
     if(!$.fn.imasker.defaults.resizeHandler){
       $.fn.imasker.defaults.resizeHandler = true;
       $(window).resize(function(){
-		    $.fn.imasker();
+		    $.fn.rmasker();
       });
     };
 
